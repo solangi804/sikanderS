@@ -30,15 +30,41 @@
         }
         
         .container {
-            background-color: white;
+            background: linear-gradient(45deg, #0abada 55%,  #ffffff 45%);
+
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 700px;
             padding: 30px;
         }
+
+        .devops {
+            /* background-color: red; */
+            h1 {
+                text-decoration: underline;
+                text-decoration-style: dashed;
+            }
+            
+            ul {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            ul li {
+                /* border: 1px solid black; */
+                list-style: none;
+                padding: 7px;
+                background-color: #2575fc;
+                color: white;
+                font-weight: bold;
+                border-radius: 8px;
+            }
+        }
+
         
         h1 {
+            font-size: 23px;
             color: #2575fc;
             margin-bottom: 10px;
             text-align: center;
@@ -206,6 +232,18 @@
             .container {
                 padding: 20px;
             }
+
+            .devops {
+                /* media Query */
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    li{
+                        margin-top: 8px;
+                    }
+                }
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -218,19 +256,18 @@
     <div class="container">
         <div class='devops'>
             <h1>Developed by</h1>
-            <span>Saad Solangi</span>
-            <span>Abdul Qadeer</span>
-            <span>Sikander Solangi</span>
+            <ul>
+                <li>Saad Solangi</li>
+                <li>Abdul Qadeer</li>
+                <li>Sikander Solangi</li>
+            </ul>
         </div>
         <h1>Mobile Number Formatter</h1>
         <p class="description">Add a '+' sign to all mobile numbers in your text. Paste or type numbers in the input area below.</p>
         
         <div class="input-section">
             <label for="inputText">Input Text:</label>
-            <textarea id="inputText" placeholder="Enter mobile numbers here, one per line or separated by commas...">1234567890
-(987) 654-3210
-00 44 7911 123456
-+1-800-555-1234</textarea>
+            <textarea id="inputText" placeholder="Enter mobile numbers here, one per line or separated by commas..."></textarea>
             <div class="stats">
                 <span id="inputCount">4 numbers detected</span>
             </div>
